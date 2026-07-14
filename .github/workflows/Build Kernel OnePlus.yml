@@ -1012,7 +1012,7 @@ jobs:
 
           # KPM配置
           if [ "${{ github.event.inputs.KPM }}" = "KPM" ] || [ "${{ github.event.inputs.KPM }}" = "N/A" ]; then
-            set_config "CONFIG_KPM=y"
+            set_config "CONFIG_KPM=n"
           fi
           if [ "${{ github.event.inputs.KPM }}" = "KPN" ]; then
             set_config "CONFIG_KPM=n"
@@ -1035,8 +1035,8 @@ jobs:
           fi
 
           # TMPFS配置*
-          set_config "CONFIG_TMPFS_XATTR=y"
-          set_config "CONFIG_TMPFS_POSIX_ACL=y"
+          
+          
 
           # BBR & ECN配置*
           if [ "${{ github.event.inputs.CCM }}" = "true" ]; then
